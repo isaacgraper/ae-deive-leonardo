@@ -5,7 +5,6 @@ const app = express()
 const port = 3000
 
 // middleware
-
 app.use(cors({
   oring: [
     'http://localhost:5173',
@@ -34,3 +33,9 @@ app.use(session({
 app.listen(port, () => {
   console.log(`server running on ${port}`)
 })
+
+// passport initialization
+app.use(passport.initialize())
+
+// passport session
+app.use(passport.session())
