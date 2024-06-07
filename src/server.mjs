@@ -6,7 +6,7 @@ const port = 3000
 
 // middleware
 app.use(cors({
-  oring: [
+  origin: [
     'http://localhost:5173',
     'http://localhost:3000',
   ],
